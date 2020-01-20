@@ -1,0 +1,16 @@
+<div class="box">
+    <header>
+        <h1>My Thoughts</h1>
+        <post-form></post-form>
+    </header>
+    <main>
+        <post
+        [title]="list.title"
+        [thought]="list.thought"
+        (submitted)="onSubmit()"
+        (deleted)="onDelete()"
+        *ngFor="let list of getPosts(); let i = index;"
+        ></post
+            >
+    </main>
+</div>

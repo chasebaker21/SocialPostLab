@@ -1,0 +1,16 @@
+div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+    margin: 10px;
+    padding-bottom: 0%;
+}
+.trash {
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+}
+button {
+    border: none;
+}

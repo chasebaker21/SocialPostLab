@@ -1,0 +1,10 @@
+<button (click)="openForm()">New Thought</button>
+<div id="form">
+    <ul>
+        <li><h4 class="title">Title</h4></li>
+        <li><input type="text" placeholder="Name your post!" class="titleInput" id="titleInput"></li>
+        <li><h4>Thought</h4></li>
+        <li class="inputText"><input type="text" placeholder="What's on your mind?" class="thoughtInput" id="thoughtInput"></li>
+        <li><button (click)="submitPost()" class="submitBtn">Add Post</button></li>
+    </ul>   
+</div>
