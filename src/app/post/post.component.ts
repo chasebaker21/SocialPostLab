@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Post } from '../post';
 
 @Component({
   selector: 'post',
@@ -7,8 +8,6 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 })
 export class PostComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() thought: string;
   @Output() deleted = new EventEmitter();
 
   constructor() { }
@@ -21,6 +20,4 @@ export class PostComponent implements OnInit {
     console.log("child event deleted");
     this.deleted.emit();
   }
-  
-
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Post } from '../post';
 
 @Component({
   selector: 'post-form',
@@ -8,19 +7,14 @@ import { Post } from '../post';
 })
 export class PostFormComponent implements OnInit {
 
+  @Output() submitted = new EventEmitter();
   @Input() title: string;
   @Input() thought: string;
-  @Output() submitted = new EventEmitter();
-
 
   constructor() { }
 
   ngOnInit() {
   }
-
-  newPost: Post = new Post();
-  allPosts = [];
-
 
   // toggles new post form
   openForm() {
@@ -30,9 +24,12 @@ export class PostFormComponent implements OnInit {
 
   // sends to onSubmit() in social-post.ts
   submitPost() {
-      this.submitted.emit(this.newPost);
-      console.log("submitted at child")
-      
+      this.submitted.emit();
+      console.log("submitted at child");
+      this.title = document.getElementById("titleInput").innerHTML;
+      this.thought = document.getElementById("thoughtInput").innerHTML;
+      console.log(this.title);
+      console.log(this.thought);
   }
 
 }

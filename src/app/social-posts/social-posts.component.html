@@ -5,10 +5,7 @@
     </header>
     <main>
         <post
-        [title]="list.title"
-        [thought]="list.thought"
-        (submitted)="onSubmit()"
-        (deleted)="onDelete()"
+        (deleted)="onDelete(i)"
         *ngFor="let list of getPosts(); let i = index;"
         ></post
             >
