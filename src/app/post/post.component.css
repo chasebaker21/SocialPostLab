@@ -6,9 +6,17 @@
     margin: 10px;
     padding-bottom: 1%;
 }
-.trash {
+.trash-date {
     display: flex;
     justify-content: flex-end;
+    flex-direction: column;
+    background-color: white;
+}
+.date {
+    margin: 3px;
+    background-color: white;
+}
+.trash {
     background-color: white;
 }
 button {

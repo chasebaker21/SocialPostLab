@@ -1,5 +1,5 @@
 <button (click)="openForm()">New Thought</button>
-<div id="form">
+<div id="form" [ngClass]="{'form': formOpen}">
     <ul>
         <li><h4 class="title">Title</h4></li>
         <li><input [(ngModel)]="newPost.title" type="text" placeholder="Name your post!" class="titleInput"></li>

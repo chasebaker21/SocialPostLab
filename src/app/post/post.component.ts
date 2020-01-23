@@ -15,15 +15,10 @@ export class PostComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setInterval( () => {
-      this.time = new Date();
-      console.log(this.time);
-    }, 1000);
   }
 
   // sends to onDelete in social-post.ts
   deletePost() {
-    console.log("child event deleted");
     this.deleted.emit();
   }
 }

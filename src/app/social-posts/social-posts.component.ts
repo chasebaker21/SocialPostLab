@@ -11,22 +11,8 @@ export class SocialPostsComponent implements OnInit {
   @Input() thought: string;
   filter: string = "";
 
-  // uses pipe to add a date/time to each post when submitted
 
-  postList : IPost[] = [
-    {
-      title: "title",
-      thought: "thought"
-    },
-    {
-      title: "another title",
-      thought: "another thought"
-    },
-    {
-      title: "yet another title",
-      thought: "yet another thought"
-    }
-  ];
+  postList : IPost[] = [];
 
   constructor() {}
 

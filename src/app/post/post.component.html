@@ -2,7 +2,8 @@
    <div>
        <h2 id="title">{{post.title}}</h2><br><h3 id="thought">{{post.thought}}</h3>
     </div>
-    <div>date{{post.date | date}}</div>
-    <div> Time is : {{time | date : 'longTime'}}</div>
-    <button (click)="deletePost()" class="trash"><i class="fas fa-trash fa-2x"></i></button>
+    <div class="trash-date">
+        <div class="date">{{post.date | date}}</div>
+        <button (click)="deletePost()" class="trash"><i class="fas fa-trash fa-2x"></i></button>    
+    </div>
 </div>

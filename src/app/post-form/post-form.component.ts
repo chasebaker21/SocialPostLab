@@ -13,6 +13,7 @@ export class PostFormComponent implements OnInit {
   @Input() thought: string;
   newPost: Post = new Post();
 
+  formOpen : boolean = false;
 
   constructor() { }
 
@@ -21,8 +22,9 @@ export class PostFormComponent implements OnInit {
 
   // toggles new post form
   openForm() {
-    let form = document.getElementById("form");
-    form.classList.toggle("form");
+    this.formOpen = true;
+    // let form = document.getElementById("form");
+    // form.classList.toggle("form");
   }
 
   // sends to onSubmit() in social-post.ts
@@ -31,6 +33,7 @@ export class PostFormComponent implements OnInit {
       this.newPost = new Post();
       // let form = document.getElementById("form");
       // form.classList.toggle("form");
+      this.formOpen = false;
   }
 
 }
