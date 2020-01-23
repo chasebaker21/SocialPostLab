@@ -1,0 +1,6 @@
+h1 {
+    font-family: 'Homemade Apple', cursive;
+    display: flex;
+    justify-content: center;
+    color: rgb(3, 169, 244);
+}

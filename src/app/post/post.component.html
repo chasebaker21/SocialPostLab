@@ -1,6 +1,8 @@
 <div id="one" (submitted)="inputUserData()">
    <div>
-       <h2 id="title">Title</h2><br><h3 id="thought">Thought</h3>
-    </div> 
+       <h2 id="title">{{post.title}}</h2><br><h3 id="thought">{{post.thought}}</h3>
+    </div>
+    <div>date{{post.date | date}}</div>
+    <div> Time is : {{time | date : 'longTime'}}</div>
     <button (click)="deletePost()" class="trash"><i class="fas fa-trash fa-2x"></i></button>
 </div>

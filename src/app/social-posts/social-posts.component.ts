@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { Post } from "../post";
 import { IPost } from "../interfaces";
 
 @Component({
@@ -10,10 +9,11 @@ import { IPost } from "../interfaces";
 export class SocialPostsComponent implements OnInit {
   @Input() title: string;
   @Input() thought: string;
-  newPost: Post = new Post();
   filter: string = "";
 
-  postList = [
+  // uses pipe to add a date/time to each post when submitted
+
+  postList : IPost[] = [
     {
       title: "title",
       thought: "thought"
@@ -21,6 +21,10 @@ export class SocialPostsComponent implements OnInit {
     {
       title: "another title",
       thought: "another thought"
+    },
+    {
+      title: "yet another title",
+      thought: "yet another thought"
     }
   ];
 
@@ -38,14 +42,12 @@ export class SocialPostsComponent implements OnInit {
     });
   }
 
-  onSubmit() {
-    console.log("Submitted on parent");
-    this.postList.push(this.newPost);
-    this.newPost = new Post();
+  onSubmit(newPost) {
+    newPost.date = new Date();
+    this.postList.push(newPost);
   }
 
   onDelete(i) {
-    console.log("Deleted on parent");
     this.postList.splice(i, 1);
   }
 }

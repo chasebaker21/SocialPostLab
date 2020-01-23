@@ -4,7 +4,7 @@
     align-items: center;
     border-bottom: 1px solid black;
     margin: 10px;
-    padding-bottom: 0%;
+    padding-bottom: 1%;
 }
 .trash {
     display: flex;
@@ -13,4 +13,7 @@
 }
 button {
     border: none;
+}
+h2, h3 {
+    margin: auto;
 }

@@ -2,9 +2,9 @@
 <div id="form">
     <ul>
         <li><h4 class="title">Title</h4></li>
-        <li><input type="text" placeholder="Name your post!" class="titleInput" id="titleInput"></li>
+        <li><input [(ngModel)]="newPost.title" type="text" placeholder="Name your post!" class="titleInput"></li>
         <li><h4>Thought</h4></li>
-        <li class="inputText"><input type="text" placeholder="What's on your mind?" class="thoughtInput" id="thoughtInput"></li>
+        <li class="inputText"><input [(ngModel)]="newPost.thought" (keyup.enter)="submitPost()" type="text" placeholder="What's on your mind?" class="thoughtInput"></li>
         <li><button (click)="submitPost()" class="submitBtn">Add Post</button></li>
     </ul>   
 </div>

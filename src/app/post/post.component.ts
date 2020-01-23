@@ -9,10 +9,16 @@ import { Post } from '../post';
 export class PostComponent implements OnInit {
 
   @Output() deleted = new EventEmitter();
+  @Input() post : Post;
+  time : Date =  new Date();
 
   constructor() { }
 
   ngOnInit() {
+    setInterval( () => {
+      this.time = new Date();
+      console.log(this.time);
+    }, 1000);
   }
 
   // sends to onDelete in social-post.ts
