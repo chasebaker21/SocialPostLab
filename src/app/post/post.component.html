@@ -3,7 +3,7 @@
        <h2 id="title">{{post.title}}</h2><br><h3 id="thought">{{post.thought}}</h3>
     </div>
     <div class="trash-date">
-        <div class="date">{{post.date | date}}</div>
+        <div class="date">{{post.date | date: "medium"}}</div>
         <button (click)="deletePost()" class="trash"><i class="fas fa-trash fa-2x"></i></button>    
     </div>
 </div>
