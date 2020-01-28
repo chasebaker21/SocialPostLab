@@ -23,16 +23,12 @@ export class PostFormComponent implements OnInit {
   // toggles new post form
   openForm() {
     this.formOpen = true;
-    // let form = document.getElementById("form");
-    // form.classList.toggle("form");
   }
 
   // sends to onSubmit() in social-post.ts
   submitPost() {
       this.submitted.emit(this.newPost);
       this.newPost = new Post();
-      // let form = document.getElementById("form");
-      // form.classList.toggle("form");
       this.formOpen = false;
   }
 
